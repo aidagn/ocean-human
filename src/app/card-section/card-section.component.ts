@@ -23,7 +23,7 @@ export class CardSectionComponent {
       link: '#'
     },
     {
-      image: '/assets/images/skull.jpg',
+      image: 'assets/images/skull.jpg',
       title: 'Expériences d\'apprentissage interactives',
       description: 'Engagez-vous avec un contenu interactif pour en apprendre davantage sur l\'anatomie humaine et la vie marine.',
       link: '#'
