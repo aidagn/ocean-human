@@ -4,12 +4,11 @@
     <h1>Discover the connections between humans and sea life</h1>
   </div>
   <div class="card-container">
-    <div class="card" *ngFor="let card of cards">
+    <div class="card" *ngFor="let card of cards"  (click)="navigateTo(card.route)">>
       <img [src]="card.image" [alt]="card.title" />
       <div class="card-content">
         <h2>{{ card.title }}</h2>
         <p>{{ card.description }}</p>
-        <a [href]="card.link">En savoir plus &rsaquo;</a>
       </div>
     </div>
   </div>

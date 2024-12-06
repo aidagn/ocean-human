@@ -1,0 +1,59 @@
+<h1>Comparaison</h1>
+<p>la page 1</p>
+
+<p>1. Cœur → Courants océaniques
+  Le cœur pompe le sang dans tout le corps, comme les courants océaniques font circuler l’eau à travers le globe, distribuant chaleur, énergie et nutriments.
+  2. Poumons → Coraux
+  Les poumons permettent l’échange d’oxygène et de dioxyde de carbone, tout comme les récifs coralliens, qui agissent comme les "poumons de l’océan", produisant et abritant de nombreuses formes de vie.
+  3. Peau → Surface de l’eau
+  La peau protège le corps et régule la température, tout comme la surface de l’océan agit comme une barrière entre l’atmosphère et les profondeurs, tout en maintenant l’équilibre thermique.
+  4. Système sanguin → Rivières sous-marines
+  Les veines et les artères du corps transportent des fluides vitaux, tout comme les rivières sous-marines (comme le courant du Golfe) transportent des nutriments essentiels dans l’océan.
+  5. Yeux → Lacs et abysses clairs
+  Les yeux reflètent la lumière et permettent de voir, semblables aux lacs sous-marins ou aux zones abyssales claires qui révèlent la lumière à travers les profondeurs.
+  6. Cheveux → Algues marines
+  Les cheveux flottent au vent ou dans l’eau, tout comme les algues marines ondulent sous l’effet des courants océaniques.
+  7. Estomac → Fosses océaniques
+  L’estomac digère et transforme les nutriments, tandis que les fosses océaniques collectent les dépôts organiques et les transforment à travers des processus chimiques.
+  8. Os → Récifs rocheux
+  Les os fournissent structure et soutien, tout comme les récifs rocheux offrent une base solide pour la vie marine.
+  9. Système nerveux → Réseaux biologiques océaniques
+  Les nerfs transmettent des signaux électriques, similaires aux réseaux biologiques sous-marins qui relient différentes formes de vie à travers des symbioses et des interactions chimiques.
+  10. Sang → Eau de mer
+  Le sang est un fluide riche en minéraux, comme le sodium et le potassium, tout comme l’eau de mer est une solution saline qui soutient la vie.
+  11. Cerveau → Écosystème entier
+  Le cerveau contrôle et coordonne les fonctions du corps, tout comme l’ensemble de l’écosystème océanique régule les cycles de vie sur Terre.
+  12. Main → Pinces ou tentacules
+  Les mains saisissent et manipulent, semblables aux tentacules des céphalopodes ou aux pinces des crabes qui interagissent avec leur environnement.
+  13. Pieds → Fonds marins
+  Les pieds ancrent le corps, tout comme les fonds marins constituent la base où poussent des coraux, des plantes et où vivent des espèces benthiques.
+</p>
+<div class="image-container">
+  <!-- L'image -->
+  <img
+    src="assets/images/human-body.webp"
+    alt="Anatomie humaine"
+  />
+
+  <!-- Points rouges sur les zones cliquables -->
+  <div
+    *ngFor="let point of pixelInfo"
+    class="clickable-point"
+    [style.top.px]="point.y"
+    [style.left.px]="point.x"
+    (click)="showTooltip($event, point)"
+    (mouseleave)="hideTooltip()"
+  ></div>
+
+  <!-- Infobulle -->
+  <div
+    *ngIf="tooltip.visible"
+    class="tooltip"
+    [style.top.px]="tooltip.y"
+    [style.left.px]="tooltip.x"
+  >
+    <h3>{{ tooltip.label }}</h3>
+    <p>Équivalent marin : {{ tooltip.equivalent }}</p>
+  </div>
+</div>
+

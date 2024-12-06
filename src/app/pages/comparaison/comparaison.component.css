@@ -1,0 +1,50 @@
+/* Conteneur principal */
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Points rouges sur les zones cliquables */
+.clickable-point {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+/* Infobulle */
+.tooltip {
+  position: absolute;
+  background-color: white; /* Arrière-plan blanc */
+  color: black; /* Texte noir */
+  padding: 15px; /* Espace intérieur plus grand */
+  border-radius: 8px; /* Coins arrondis */
+  border: 1px solid #ddd; /* Bordure grise */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre */
+  z-index: 1000;
+  pointer-events: none;
+  transform: translate(20px, -50%); /* Positionne à droite du point rouge */
+  max-width: 200px; /* Largeur maximale */
+}
+
+.tooltip h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.tooltip p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}

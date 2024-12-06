@@ -70,3 +70,11 @@
 .card-content a:hover {
   text-decoration: underline;
 }
+.card {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
