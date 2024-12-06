@@ -1,0 +1,15 @@
+<section class="card-section">
+  <div class="section-header">
+    <h3>Explore Marine Anatomy</h3>
+    <h1>Discover the connections between humans and sea life</h1>
+  </div>
+  <div class="card-container">
+    <div class="card" *ngFor="let card of cards"  (click)="navigateTo(card.route)">>
+      <img [src]="card.image" [alt]="card.title" />
+      <div class="card-content">
+        <h2>{{ card.title }}</h2>
+        <p>{{ card.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
