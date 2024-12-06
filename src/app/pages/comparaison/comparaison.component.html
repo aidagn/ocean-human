@@ -28,3 +28,32 @@
   13. Pieds → Fonds marins
   Les pieds ancrent le corps, tout comme les fonds marins constituent la base où poussent des coraux, des plantes et où vivent des espèces benthiques.
 </p>
+<div class="image-container">
+  <!-- L'image -->
+  <img
+    src="assets/images/human-body.webp"
+    alt="Anatomie humaine"
+  />
+
+  <!-- Points rouges sur les zones cliquables -->
+  <div
+    *ngFor="let point of pixelInfo"
+    class="clickable-point"
+    [style.top.px]="point.y"
+    [style.left.px]="point.x"
+    (click)="showTooltip($event, point)"
+    (mouseleave)="hideTooltip()"
+  ></div>
+
+  <!-- Infobulle -->
+  <div
+    *ngIf="tooltip.visible"
+    class="tooltip"
+    [style.top.px]="tooltip.y"
+    [style.left.px]="tooltip.x"
+  >
+    <h3>{{ tooltip.label }}</h3>
+    <p>Équivalent marin : {{ tooltip.equivalent }}</p>
+  </div>
+</div>
+
