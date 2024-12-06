@@ -24,7 +24,7 @@ export class CardSectionComponent {
       image: 'assets/images/skull.jpg',
       title: 'Adaptations uniques de la vie marine',
       description: 'Explorez les adaptations exceptionnelles des organismes marins pour survivre dans leur environnement.',
-      route: '/comparaison'},
+      route: '/adaptations'},
     {
       image: 'assets/images/skull.jpg',
       title: 'Expériences d\'apprentissage interactives',

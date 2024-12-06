@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module'; // Import du module de 
 import { AppComponent } from './app.component';
 import { ComparaisonComponent } from './pages/comparaison/comparaison.component';
 import { VideoComponent } from './video/video.component';
+import { AdaptationsComponent} from './pages/adaptations/adaptations.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { VideoComponent } from './video/video.component';
     AppComponent,
     ComparaisonComponent,
     VideoComponent,
+    AdaptationsComponent,
   ],
   providers: [],
   bootstrap: []
